@@ -5,7 +5,16 @@
   <groupId>io.github.townyadvanced</groupId>
   <artifactId>TownyProvinces</artifactId>
   <version>2.0.0</version>
-  <name>townyprovinces</name> <!-- Leave lower-cased -->
+    <packaging>pom</packaging>
+    <name>townyprovinces</name>
+    <modules>
+        <module>townyprovinces-pl3xmap-v3</module>
+        <module>townyprovinces-pl3xmap-v2</module>
+        <module>townyprovinces-pl3xmap-v1</module>
+        <module>townyprovinces-bluemap</module>
+        <module>townyprovinces-dynmap</module>
+        <module>townyprovinces-plugin</module>
+    </modules> <!-- Leave lower-cased -->
 
   <properties>
     <java.version>1.16</java.version>
@@ -16,24 +25,12 @@
 
   <repositories>
       <repository>
-          <id>jitpack.io</id>
-          <url>https://jitpack.io</url>
-      </repository>
-    <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-    </repository>
-    <repository>
-      <id>glaremasters repo</id>
-      <url>https://repo.glaremasters.me/repository/towny/</url>
-    </repository>
-      <repository>
-          <id>dynmap-repo</id>
-          <url>https://repo.mikeprimm.com/</url>
+        <id>spigot-repo</id>
+        <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
       </repository>
       <repository>
-          <id>Modrinth</id>
-          <url>https://api.modrinth.com/maven</url>
+        <id>glaremasters repo</id>
+        <url>https://repo.glaremasters.me/repository/towny/</url>
       </repository>
   </repositories>
 
@@ -51,32 +48,6 @@
       <version>0.99.1.0</version>
       <scope>provided</scope>
     </dependency>
-      <!--
-      <dependency>
-          <groupId>us.dynmap</groupId>
-          <artifactId>dynmap-api</artifactId>
-          <version>2.5</version>
-          <scope>provided</scope>
-      </dependency>
-      -->
-      <dependency>
-          <groupId>us.dynmap</groupId>
-          <artifactId>dynmap-api</artifactId>
-          <version>3.0-SNAPSHOT</version>
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
-          <groupId>maven.modrinth</groupId>
-          <artifactId>pl3xmap</artifactId>
-          <version>1.20.1-468</version>
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
-          <groupId>com.github.BlueMap-Minecraft</groupId>
-          <artifactId>BlueMapAPI</artifactId>
-          <version>v2.5.1</version>
-          <scope>provided</scope>
-      </dependency>
   </dependencies>
 
   <build>
@@ -93,7 +64,7 @@
     </plugins>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
+        <directory>townyprovinces-plugin/src/main/resources</directory>
         <filtering>true</filtering>
       </resource>
     </resources>
