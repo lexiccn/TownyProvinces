@@ -14,6 +14,7 @@
         <module>townyprovinces-bluemap</module>
         <module>townyprovinces-dynmap</module>
         <module>townyprovinces-plugin</module>
+        <module>townyprovinces-squaremap</module>
     </modules> <!-- Leave lower-cased -->
 
   <properties>
